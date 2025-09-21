@@ -464,6 +464,91 @@ button[type="submit"]:hover {
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);     /* Purple shadow */
 }
 
+/* ===== CONTACT ALTERNATIVES SECTION ===== */
+
+/* Container for alternative contact methods */
+.contact-alternatives {
+    margin-top: 2rem;                   /* Space above section */
+    padding: 2rem;                      /* Internal spacing */
+    background: #f8f9fa;                /* Light background */
+    border-radius: 10px;                /* Rounded corners */
+    border-left: 5px solid #667eea;     /* Purple left border */
+}
+
+/* Contact alternatives heading */
+.contact-alternatives h3 {
+    color: #2d3436;                     /* Dark gray color */
+    margin-bottom: 1rem;                /* Space below heading */
+    font-size: 1.4rem;                  /* Medium heading size */
+}
+
+/* Contact buttons container */
+.contact-buttons {
+    display: flex;                      /* Flexbox layout */
+    flex-wrap: wrap;                    /* Wrap on small screens */
+    gap: 1rem;                         /* Space between buttons */
+    justify-content: center;            /* Center buttons */
+}
+
+/* Base contact button styling */
+.contact-btn {
+    padding: 0.8rem 1.5rem;             /* Internal spacing */
+    border-radius: 25px;                /* Rounded corners */
+    text-decoration: none;              /* Remove underline */
+    font-weight: 600;                   /* Semi-bold text */
+    transition: all 0.3s ease;          /* Smooth transitions */
+    display: inline-block;              /* Inline block for spacing */
+    text-align: center;                 /* Center text */
+    min-width: 180px;                   /* Minimum button width */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);  /* Subtle shadow */
+}
+
+/* Primary contact button (main email) */
+.contact-btn.primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);  /* Purple gradient */
+    color: white;                                            /* White text */
+}
+
+.contact-btn.primary:hover {
+    transform: translateY(-3px);                            /* Move up on hover */
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);      /* Enhanced shadow */
+}
+
+/* Secondary contact button (tech team) */
+.contact-btn.secondary {
+    background: linear-gradient(135deg, #00b894, #00cec9);  /* Teal gradient */
+    color: white;                                            /* White text */
+}
+
+.contact-btn.secondary:hover {
+    transform: translateY(-3px);                            /* Move up on hover */
+    box-shadow: 0 8px 20px rgba(0, 184, 148, 0.3);        /* Enhanced shadow */
+}
+
+/* Social media contact buttons */
+.contact-btn.social {
+    background: linear-gradient(135deg, #fd79a8, #e84393);  /* Pink gradient */
+    color: white;                                            /* White text */
+}
+
+.contact-btn.social:hover {
+    transform: translateY(-3px);                            /* Move up on hover */
+    box-shadow: 0 8px 20px rgba(253, 121, 168, 0.3);      /* Enhanced shadow */
+}
+
+/* Responsive contact buttons */
+@media (max-width: 768px) {
+    .contact-buttons {
+        flex-direction: column;          /* Stack vertically on mobile */
+        align-items: center;             /* Center buttons */
+    }
+    
+    .contact-btn {
+        width: 100%;                     /* Full width on mobile */
+        max-width: 300px;                /* Maximum width */
+    }
+}
+
 /* Error message styling */
 .error-message {
     color: #d63031;                     /* Red text */

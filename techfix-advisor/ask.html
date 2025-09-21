@@ -30,12 +30,12 @@
     <main>
       <section>
         <h2>Submit Your Question</h2>
-        <form action="mailto:444mwangialvinm@gmail.com,tech.marval.innovations@gmail.com?subject=TechFix%20Advisor%20Question&body=Please%20fill%20out%20the%20form%20below:" method="post" enctype="text/plain">
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+        <form action="mailto:444mwangialvinm@gmail.com,tech.marval.innovations@gmail.com?subject=TechFix%20Question%20Submission&body=Please%20find%20the%20question%20details%20below:" method="post" enctype="text/plain">
+          <label for="name">Name (optional):</label><br>
+          <input type="text" id="name" name="name" placeholder="Your name"><br><br>
 
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" placeholder="your.email@example.com" required><br><br>
+          <label for="email">Email (optional):</label><br>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com"><br><br>
 
           <label for="device">Device Type:</label><br>
           <select id="device" name="device" required>
@@ -54,6 +54,25 @@
 
           <button type="submit">Submit Question</button>
         </form>
+        
+        <!-- Alternative contact methods -->
+        <div class="contact-alternatives">
+          <h3>Alternative Contact Methods:</h3>
+          <div class="contact-buttons">
+            <a href="mailto:444mwangialvinm@gmail.com?subject=TechFix%20Question" class="contact-btn primary">
+              📧 Email Primary Support
+            </a>
+            <a href="mailto:tech.marval.innovations@gmail.com?subject=TechFix%20Question" class="contact-btn secondary">
+              🔧 Email Technical Team
+            </a>
+            <a href="https://instagram.com/vin_grinch" class="contact-btn social" target="_blank">
+              📱 Instagram @vin_grinch
+            </a>
+            <a href="https://instagram.com/marval.tech" class="contact-btn social" target="_blank">
+              🏢 Instagram @marval.tech
+            </a>
+          </div>
+        </div>
       </section>
 
       <section>
