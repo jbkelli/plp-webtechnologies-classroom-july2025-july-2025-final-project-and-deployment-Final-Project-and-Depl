@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta name="Author" content="Alvin Maina">
+    <meta name="descripton" content="Tech fix advisor is your tech mentor on how to handle or even choose among various sections of tech depending on your end goal">
+    <meta name="keywords" content="Tech system, Tech advisor, Tech doctor">
+    <meta property="og:title" content="TechFix-Advisor | Your Tech Advisor">
+    <meta property="og:description" content="Tech fix advisor is your tech mentor on how to handle or even choose among various sections of tech depending on your end goal">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix-Advisor | Your Tech Advisor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/ecebdab2c1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+        <img src="images/logo.jpg" alt="Neural network Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="advice.html">ADVISOR</a></li>
+                <li><a href="safety.html">SAFETY TIPS</a></li>
+                <li><a href="ask.html">QUERIES</a></li>
+                <li><a href="community.html">COMMUNITY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="filters">
+      <ul>
+        <li><a href="" onclick="">Buying Advice</a></li>
+        <li><a href="" onclick="">Troubleshooting</a></li>
+        <li><a href="" onclick="">Tech Literacy</a></li>
+      </ul>
+    </section>
+
+    <section class="advicecards">
+      <div class="laptop">
+        <h2>How to choose a laptop that fits your needs</h2>
+        <p class="advice">
+          Choosing a laptop that fits your needs depends on so many factors, some of them being: <br>
+          <ul>
+            <li>Type of work you want to do with it</li>
+            <li>Mobility(Whether you will move around or not)</li>
+            <li>Your own taste</li>
+            <li>Budget</li>
+            <li>Working environment(e.g are there power isssues or not)</li>
+            <li>Tech knowledge(May be funny but serious in various cases).</li>
+          </ul>
+          Read this article to understand what you need to do or what to consider when purchasing a laptop. <a href="https://www.wired.com/story/how-to-buy-the-right-laptop-for-you/#:~:text=Understanding%20Use%20Cases%20and%20Budget,Infinite%20Machine's%20New%20Olto%20Ebike">Learn More</a>
+        </p>
+      </div>
+
+      <div class="phone">
+        <h2>How to buy the right phone</h2>
+        <p class="advice">
+          As simple as it sounds, buying a phone isn't just something you wake up and decide on. It takes planning and proper preparations in order to buy a well-fit phone for you as you'll see from this <a href="https://www.ryans.com/blog/how-to-choose-the-right-smartphone-for-your-needs-a-simple-guide#:~:text=Identify%20Your%20Usage%20Style,choose%20fits%20your%20lifestyle%20perfectly.">article</a>.
+        </p>
+      </div>
+
+      <div class="troubleshooting">
+        <h2>Fixing some popular smartphone and laptop related issues</h2>
+        <p class="advice">
+          There are various issues that come up when one is using tech, be it a smart watch, smart TV, laptop, smartphone and even ironically smart Home devices like Fridges. <br>
+          As many as they are, I will talk about one of these issues that almost every laptop user has encountered and other issues will be discussed on provided articles. <br>
+          <img src="https://i.dell.com/sites/csimages/App-Merchandizing_esupport_flatcontent_global_Images/all/bluescreen.png" alt="Windows failure blue screen">
+          <img src="https://learn-attachment.microsoft.com/api/attachments/9ea9c331-fd9f-4f9e-b3e9-75ae5d005a33?platform=QnA" alt="Windows diagnostics screen">
+          Okay, let's be honest. Windows users have seen this a couple of times, others more than the fingers on your right hand. <br>
+          After seeing this, everyone has that panic strike that kicks in, thinking OMG, my laptop is broken. After getting it to a repair shop you're told "just leave it here and we'll fix it for you". <br>
+          They don't do any magic, they just take a few steps that you can take as well to fix it. Remember, do everything carefully or you will end up crying alone. <br>
+          <ol>
+            <li>Once you see the screen reading(Automatic Repair), there are usually 2 options: <ul>
+              <li>Restart</li>
+              <li>Advanced Options</li>
+            </ul>
+            Usually, people tend to click on restart, running into the same screen again, or click on advanced options and try to reset the pc. <br>
+            Do this instead, once you click on advanced options, it will have several options. Select command prompt
+            </li>
+            <li>After selecting command prompt, it may ask for user and password, you already have those. On the command prompt window that shows up, type Diskpart. <br>
+            Diskpart is a disk optimization tool used in doing certain operations to your drives/disks
+            </li>
+            <li>Afterwards type List disk, listing all the available disks in that laptop meaning all your flash drives if connected, all your external and internal drives will be listed, alongside their drive letters. <br>
+            Usually windows is installed on drive C, but if you had renamed it, it will still read whatever you had named it.
+            <br>
+            I know you are asking what we are looking for. Most of the times a disk may fail or "crash", which means accessing it's information like files or Operating systems will be difficult. We want to see if your disk containing your Windows Operating System is still there and alive. Which you'll know if it reads it's original size, whether 256GB, 500GB, whichever, that will show that it is alive.
+            <br>
+            If it doesn't read your disk at all it means you have a faulty connection where your disk is connected, that just means it shifted a little bit. If it reads but shows a false storage size like 6778Bytes, well that is direct that it crashed.
+            </li>
+            <li>Now let us check if Windows, whether Windows 11 or 10, is still there or it crashed. I know what you are asking and yes, an operating system can crash. <br>
+            After typing list disk, type list volume, which lists the volumes, this is where you might find the letter c.
+            </li>
+            <li>Assuming it is letter C that has your windows OS, you will exit Diskpart by typing exit then typing dir C:\Windows(Check the spelling and cases).
+            This will check if windows is on that drive. If windows is there, there will be a list that is displayed of the contents there. If not then Windows decided to say bye bye and you will need a fresh OS installation. 
+            </li>
+            <li>If everything was a success then you just need to restart your pc, and it should boot into windows directly without any problems. If it still loops on that spot, you may need to shutdown your pc for a while before using it again. Sometimes devices may buffer and show erros that are not there.
+            </li>
+            <li>Lastly, make sure you keep your pc always up to date and research on Tech issues or reach us <a href="https://instagram.com/vin_grinch">Grinch</a> or <a href="https://instagram.com/marval.tech">MaRval Technologies</a> for more guided assistance.
+            </li>
+          </ol>
+          For more information regarding various troubleshooting methods, email us at <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">tech.marval.innovations@gmail.com</a> with a detail information of what you're trying to troubleshoot and we will guide you through.
+        </p>
+      </div>
+
+      <div class="techliteracy">
+        <h2>Tech Literacy</h2>
+        <p class="advice">
+          Just like your need to learn other languages like English, French, Japanese and so on, It is also important to learn about tech. <br>
+          Like do not run resource intensice applications on a basic PC that does not even meet the minimum requirements to run said application. <br>
+          Like many people have tried to get Windows 11 installed on their PCs ever since microsoft announced end of support for Windows 10. Many PCs do not meet the requirements to run Windows 11. Techies may not tell you that, they will just bypass the installation and you will be happy running windows 11 but at the risk of killing your PC, and even your drive.
+          <br>
+          Before you do anything, whether it is running a game, installing an app, changing to another operating system or even programming, research on the matter to avoid future regrets.
+        </p>
+      </div>
+
+    </section>
+
+    <footer>
+        Copyright©JBKELLI
+        <a href="https://instagram.com/vin_grinch">Grinch</a>
+        <a href="https://instagram.com/marval.tech">MaRval Technologies</a>
+    </footer>
+    <script src="JS/script.js"></script>
+  </body>
+  </html>
