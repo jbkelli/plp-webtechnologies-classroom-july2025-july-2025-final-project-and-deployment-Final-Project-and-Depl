@@ -313,13 +313,23 @@ function isValidEmail(email) {
 
 /**
  * Handle form submission with loading state and success feedback
+ * Now supports multiple email recipients
  * @param {HTMLFormElement} form - The form being submitted
  */
 function submitForm(form) {
     const submitButton = form.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     
-    // Show loading state
+    // Check if this is the contact form (has action with mailto)
+    const isMailtoForm = form.action && form.action.includes('mailto:');
+    
+    if (isMailtoForm) {
+        // For mailto forms, create a properly formatted email
+        handleMailtoSubmission(form);
+        return;
+    }
+    
+    // Show loading state for other forms
     submitButton.disabled = true;
     submitButton.innerHTML = '<div class="spinner"></div> Submitting...';
     
@@ -330,6 +340,90 @@ function submitForm(form) {
         submitButton.disabled = false;           // Re-enable button
         submitButton.textContent = originalText; // Restore button text
     }, 2000);
+}
+
+/**
+ * Handle mailto form submission with multiple recipients
+ * Creates a formatted email with all form data
+ * @param {HTMLFormElement} form - The form being submitted
+ */
+function handleMailtoSubmission(form) {
+    // Get form data
+    const formData = new FormData(form);
+    const name = formData.get('name') || 'Anonymous';
+    const email = formData.get('email') || 'No email provided';
+    const device = formData.get('device') || 'Not specified';
+    const question = formData.get('question') || '';
+    
+    // Create formatted email body
+    const emailBody = `
+TechFix Advisor - New Question Submission
+
+Name: ${name}
+Email: ${email}
+Device Type: ${device}
+
+Question/Issue:
+${question}
+
+---
+Submitted via TechFix Advisor website
+Time: ${new Date().toLocaleString()}
+    `.trim();
+    
+    // Multiple email recipients
+    const recipients = [
+        '444mwangialvinm@gmail.com',
+        'tech.marval.innovations@gmail.com'
+    ];
+    
+    // Create mailto URL with multiple recipients and formatted content
+    const subject = encodeURIComponent('TechFix Advisor - New Question');
+    const body = encodeURIComponent(emailBody);
+    const mailtoUrl = `mailto:${recipients.join(',')}?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoUrl;
+    
+    // Show success message
+    showMailtoSuccessMessage(form);
+}
+
+/**
+ * Show success message for mailto submissions
+ * @param {HTMLFormElement} form - The form that was submitted
+ */
+function showMailtoSuccessMessage(form) {
+    // Create success message element
+    const successDiv = document.createElement('div');
+    successDiv.className = 'success-message';
+    successDiv.style.cssText = `
+        background-color: #00b894;
+        color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+        text-align: center;
+        font-weight: 600;
+    `;
+    successDiv.innerHTML = `
+        <h3>Email Client Opened!</h3>
+        <p>Your question has been formatted and your email client should now be open.</p>
+        <p>The email will be sent to both:</p>
+        <ul style="list-style: none; margin: 0.5rem 0;">
+            <li>• 444mwangialvinm@gmail.com</li>
+            <li>• tech.marval.innovations@gmail.com</li>
+        </ul>
+        <p><small>If your email client didn't open, please copy the information and send manually.</small></p>
+    `;
+    
+    // Insert success message before form
+    form.parentNode.insertBefore(successDiv, form);
+    
+    // Auto-remove success message after 10 seconds
+    setTimeout(() => {
+        successDiv.remove();
+    }, 10000);
 }
 
 /**
