@@ -1,26 +1,51 @@
-<!-- This is the landing page, the homepage of the site -->
- <!-- Welcome to techfix advisor, your teacher on matters of tech, just whistle and we'll answer your distress call -->
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<!-- 
+  TechFix Advisor - Homepage (Landing Page)
+  Description: Main landing page that introduces users to TechFix Advisor services
+  Author: Alvin Maina
+  Last Updated: September 21, 2025
+  
+  Page Features:
+  - Hero section with mission statement and video
+  - Featured advice cards showcase
+  - Call-to-action buttons for main sections
+  - Responsive navigation
+  - Professional footer with contact links
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for SEO and social media sharing -->
     <meta name="Author" content="Alvin Maina">
     <meta name="descripton" content="Tech fix advisor is your tech mentor on how to handle or even choose among various sections of tech depending on your end goal">
     <meta name="keywords" content="Tech system, Tech advisor, Tech doctor">
+    
+    <!-- Open Graph meta tags for social media preview -->
     <meta property="og:title" content="TechFix-Advisor | Your Tech Advisor">
     <meta property="og:description" content="Tech fix advisor is your tech mentor on how to handle or even choose among various sections of tech depending on your end goal">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
+    
+    <!-- Essential meta tags for responsive design and encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title shown in browser tab -->
     <title>TechFix-Advisor | Your Tech Advisor</title>
+    
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Main site header with logo and navigation -->
     <header>
+        <!-- Company logo with alt text for accessibility -->
         <img src="images/logo.jpg" alt="Neural network Logo">
+        
+        <!-- Main site navigation menu -->
         <nav>
             <ul>
+                <!-- Navigation links to all main pages -->
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="advice.html">ADVISOR</a></li>
                 <li><a href="safety.html">SAFETY TIPS</a></li>
@@ -29,48 +54,79 @@
             </ul>
         </nav>
     </header>
+    
+    <!-- Hero section - Main focal point of the homepage -->
     <section class="hero">
-      <h2>Our Work</h2>
-      <img src="" alt="Picture of tech fix">
-      <p class="herobanner">
-        <blockquote class="phrase">"Tech Clarity for Everyone - No Jargon, No Stress"</blockquote>
+        <!-- Main heading describing the service -->
+        <h2>Our Work</h2>
+        
+        <!-- Placeholder for hero image  -->
+        <img src="https://images.pexels.com/photos/6755058/pexels-photo-6755058.jpeg" alt="Picture of tech fix">
+        
+        <!-- Hero banner content with mission statement -->
+        <p class="herobanner">
+            <!-- Main tagline/slogan -->
+            <blockquote class="phrase">"Tech Clarity for Everyone - No Jargon, No Stress"</blockquote>
 
-        Here at tech fix, we help you solve tech problems, make smart purchases and stay safe online without having to take that long trip to the repairs - all in pure language
+            <!-- Service description paragraph -->
+            Here at tech fix, we help you solve tech problems, make smart purchases and stay safe online without having to take that long trip to the repairs - all in pure language
 
-        <video width="300" height="200">
-          <source src="https://www.pexels.com/download/video/5523892/" type="">
-          Your browser does not support video playing
-        </video>
-        <blockquote class="dislcaimer"><span>DISCLAIMER‼: </span>Please proceed with caution. Technology can be delicate, and we are not liable for any further damage to your device that occurs while you follow these steps. Our instructions are for guidance only. Any action you take is at your own risk, and TechFix cannot be held responsible for any damage that may result.</blockquote>
-      </p>
+            <!-- Embedded video for visual engagement -->
+            <video width="300" height="200">
+                <source src="https://www.pexels.com/download/video/5523892/" type="">
+                <!-- Fallback message for browsers that don't support video -->
+                Your browser does not support video playing
+            </video>
+            
+            <!-- Important disclaimer for legal protection -->
+            <blockquote class="dislcaimer">
+                <span>DISCLAIMER‼: </span>Please proceed with caution. Technology can be delicate, and we are not liable for any further damage to your device that occurs while you follow these steps. Our instructions are for guidance only. Any action you take is at your own risk, and TechFix cannot be held responsible for any damage that may result.
+            </blockquote>
+        </p>
     </section>
 
+    <!-- Featured advice cards section -->
     <section class="cards">
-      <h2>Featured Advice Cards</h2>
-      <div class="card1">
-        Best budget phones for students
-      </div>
-      <div class="class2">
-        How to spot fake apps and websites
-      </div>
-      <div class="class3">
-        Why did your laptop crash?
-      </div>
-
+        <!-- Section heading -->
+        <h2>Featured Advice Cards</h2>
+        
+        <!-- Individual advice cards with different topics -->
+        <!-- Card 1: Budget phone advice -->
+        <div class="card1">
+            Best budget phones for students
+        </div>
+        
+        <!-- Card 2: Security awareness -->
+        <div class="class2">
+            How to spot fake apps and websites
+        </div>
+        
+        <!-- Card 3: Troubleshooting guide -->
+        <div class="class3">
+            Why did your laptop crash?
+        </div>
     </section>
 
+    <!-- Call-to-action section with navigation buttons -->
     <section class="callout">
-      <button><a href="advice.html">BROWSE ADVICE</a></button>
-      <button><a href="ask.html">ASK A QUESTION</a></button>
-      <button><a href="safety.html">VIEW SCMA ALERTS</a></button>
+        <!-- Primary action buttons leading to main sections -->
+        <button><a href="advice.html">BROWSE ADVICE</a></button>
+        <button><a href="ask.html">ASK A QUESTION</a></button>
+        <button><a href="safety.html">VIEW SCMA ALERTS</a></button>
     </section>
 
+    <!-- Site footer with copyright and contact information -->
     <footer>
+        <!-- Copyright notice -->
         Copyright©JBKELLI
+        
+        <!-- Social media and contact links -->
         <a href="https://instagram.com/vin_grinch">Grinch</a>
         <a href="https://instagram.com/marval.tech">MaRval Technologies</a>
         <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">444mwangialvinm@gmail.com</a>
     </footer>
+    
+    <!-- JavaScript file for interactive functionality -->
     <script src="JS/script.js"></script>
-  </body>
-  </html>
+</body>
+</html>

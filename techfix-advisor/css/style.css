@@ -1,31 +1,724 @@
-/* TechFix Advisor - Complete CSS Styling */
+/* 
+=============================================================================
+  TechFix Advisor - Complete CSS Stylesheet
+=============================================================================
+  
+  Description: Comprehensive styling for TechFix Advisor website
+  Author: Alvin Maina (Enhanced with comprehensive styling)
+  Last Updated: September 21, 2025
+  
+  Table of Contents:
+  1. Reset and Base Styles
+  2. Header and Navigation
+  3. Hero Section
+  4. Cards and Layout Components
+  5. Forms and Interactive Elements
+  6. Footer
+  7. Responsive Design
+  8. Animations and Transitions
+  9. Utility Classes
+  
+  Design Philosophy:
+  - Mobile-first responsive design
+  - Modern gradient color schemes
+  - Smooth animations and transitions
+  - Accessible and user-friendly interface
+  - Professional business appearance
+=============================================================================
+*/
 
-/* ===== RESET AND BASE STYLES ===== */
+/* ===== 1. RESET AND BASE STYLES ===== */
+
+/* Universal reset for consistent rendering across browsers */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                    /* Remove default margins */
+    padding: 0;                   /* Remove default padding */
+    box-sizing: border-box;       /* Include padding and border in element width/height */
 }
 
+/* Base body styling with flexbox for sticky footer */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Modern font stack */
+    line-height: 1.6;                                              /* Improved readability */
+    color: #333;                                                    /* Dark gray text */
+    background-color: #f8f9fa;                                     /* Light gray background */
+    min-height: 100vh;                                             /* Full viewport height */
+    display: flex;                                                  /* Flexbox container */
+    flex-direction: column;                                         /* Vertical layout */
 }
 
+/* Default link styling with smooth transitions */
 a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
+    text-decoration: none;         /* Remove underlines */
+    color: inherit;                /* Inherit parent color */
+    transition: color 0.3s ease;  /* Smooth color transitions */
 }
 
+/* Responsive image styling */
 img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%;              /* Never exceed container width */
+    height: auto;                 /* Maintain aspect ratio */
+}
+
+/* ===== 2. HEADER AND NAVIGATION STYLES ===== */
+
+/* Main header container with gradient background and sticky positioning */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  /* Purple gradient */
+    padding: 1rem 2rem;                                             /* Internal spacing */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);                        /* Subtle shadow */
+    position: sticky;                                                /* Stick to top when scrolling */
+    top: 0;                                                          /* Stick at very top */
+    z-index: 1000;                                                  /* High z-index for layering */
+    display: flex;                                                   /* Flexbox layout */
+    justify-content: space-between;                                  /* Space between logo and nav */
+    align-items: center;                                             /* Center items vertically */
+}
+
+/* Logo styling with hover animation */
+header img {
+    height: 50px;                        /* Fixed height */
+    width: auto;                         /* Maintain aspect ratio */
+    border-radius: 50%;                  /* Circular logo */
+    transition: transform 0.3s ease;     /* Smooth scaling transition */
+}
+
+/* Logo hover effect */
+header img:hover {
+    transform: scale(1.1);               /* Slightly enlarge on hover */
+}
+
+/* Navigation container - removes list styling and creates horizontal layout */
+nav ul {
+    list-style: none;                    /* Remove bullet points */
+    display: flex;                       /* Horizontal layout */
+    gap: 2rem;                          /* Space between nav items */
+}
+
+/* Individual navigation item positioning for pseudo-elements */
+nav ul li {
+    position: relative;                  /* For absolute positioning of child elements */
+}
+
+/* Navigation link styling with modern button appearance */
+nav ul li a {
+    color: white;                        /* White text for contrast */
+    font-weight: 600;                    /* Semi-bold text */
+    padding: 0.5rem 1rem;               /* Internal spacing */
+    border-radius: 25px;                /* Rounded corners */
+    transition: all 0.3s ease;          /* Smooth transitions for all properties */
+    display: block;                      /* Block display for padding */
+}
+
+/* Navigation link hover effects */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);  /* Semi-transparent white background */
+    transform: translateY(-2px);                  /* Slight upward movement */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);       /* Drop shadow */
+}
+
+/* Active navigation link styling */
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.3);  /* More opaque background for active state */
+}
+
+/* ===== 3. HERO SECTION STYLES ===== */
+
+/* Main hero section with background image and overlay */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/c83f3d6a-da82-4828-848e-7f1b8151347c.jpg');
+    background-size: cover;              /* Cover entire section */
+    background-position: center;         /* Center the background image */
+    color: white;                        /* White text for contrast */
+    padding: 4rem 2rem;                 /* Large padding for visual impact */
+    text-align: center;                 /* Center all text */
+    min-height: 70vh;                   /* 70% of viewport height */
+    display: flex;                      /* Flexbox for centering */
+    flex-direction: column;             /* Vertical layout */
+    justify-content: center;            /* Center vertically */
+    align-items: center;                /* Center horizontally */
+}
+
+/* Main hero heading */
+.hero h2 {
+    font-size: 3rem;                    /* Large heading size */
+    margin-bottom: 2rem;                /* Space below heading */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);  /* Text shadow for readability */
+}
+
+/* Hero banner content container */
+.herobanner {
+    max-width: 800px;                   /* Limit width for readability */
+    font-size: 1.2rem;                  /* Slightly larger than normal text */
+    line-height: 1.8;                   /* Improved line spacing */
+    margin-bottom: 2rem;                /* Space below content */
+}
+
+/* Main tagline/slogan styling */
+.phrase {
+    font-size: 2rem;                    /* Large tagline text */
+    font-style: italic;                 /* Italic emphasis */
+    color: #ffd700;                     /* Gold color for emphasis */
+    margin-bottom: 2rem;                /* Space below tagline */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);  /* Strong text shadow */
+    display: block;                     /* Block display for proper spacing */
+}
+
+/* Disclaimer box styling */
+.dislcaimer {
+    background-color: rgba(255, 165, 0, 0.9);  /* Orange background with transparency */
+    color: #000;                                 /* Black text for contrast */
+    padding: 1rem;                              /* Internal spacing */
+    border-radius: 10px;                        /* Rounded corners */
+    margin-top: 2rem;                           /* Space above disclaimer */
+    font-weight: bold;                          /* Bold text */
+    border-left: 5px solid #ff6b6b;            /* Red left border for emphasis */
+}
+
+/* Disclaimer emphasis text */
+.dislcaimer span {
+    color: #d63031;                     /* Red color for "DISCLAIMER" text */
+    font-weight: 900;                   /* Extra bold */
+}
+
+/* Hero video styling */
+.hero video {
+    margin: 2rem 0;                     /* Vertical spacing */
+    border-radius: 10px;                /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);  /* Drop shadow */
+}
+
+/* ===== 4. CARDS SECTION STYLES ===== */
+
+/* Cards container styling */
+.cards {
+    padding: 4rem 2rem;                 /* Large padding for visual separation */
+    background-color: white;            /* White background */
+}
+
+/* Cards section heading */
+.cards h2 {
+    text-align: center;                 /* Center the heading */
+    margin-bottom: 3rem;                /* Large space below heading */
+    font-size: 2.5rem;                  /* Large heading size */
+    color: #2d3436;                     /* Dark gray color */
+}
+
+/* Base card styling with gradient backgrounds */
+.cards > div {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);  /* Blue gradient default */
+    color: white;                                            /* White text */
+    padding: 2rem;                                          /* Internal spacing */
+    margin: 1rem;                                           /* External spacing */
+    border-radius: 15px;                                    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);              /* Subtle shadow */
+    transition: all 0.3s ease;                             /* Smooth transitions */
+    cursor: pointer;                                        /* Pointer cursor for interactivity */
+    text-align: center;                                     /* Center text */
+    font-size: 1.1rem;                                     /* Slightly larger text */
+    font-weight: 600;                                       /* Semi-bold text */
+}
+
+/* Card hover effects */
+.cards > div:hover {
+    transform: translateY(-10px);                           /* Move up on hover */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);              /* Stronger shadow */
+}
+
+/* Specific card color schemes */
+.card1 {
+    background: linear-gradient(135deg, #fd79a8, #e84393) !important;  /* Pink gradient */
+}
+
+.class2 {
+    background: linear-gradient(135deg, #fdcb6e, #e17055) !important;  /* Orange gradient */
+}
+
+.class3 {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe) !important;  /* Purple gradient */
+}
+
+/* ===== 5. CALL-TO-ACTION SECTION ===== */
+
+/* Callout section with teal gradient background */
+.callout {
+    background: linear-gradient(135deg, #00b894, #00cec9);  /* Teal gradient */
+    padding: 3rem 2rem;                                      /* Large padding */
+    text-align: center;                                      /* Center content */
+    display: flex;                                           /* Flexbox layout */
+    justify-content: center;                                 /* Center buttons */
+    gap: 2rem;                                              /* Space between buttons */
+    flex-wrap: wrap;                                        /* Wrap on small screens */
+}
+
+/* Call-to-action button styling */
+.callout button {
+    background: white;                   /* White background */
+    border: none;                        /* Remove default border */
+    padding: 1rem 2rem;                 /* Internal spacing */
+    border-radius: 50px;                /* Very rounded corners */
+    font-size: 1.1rem;                  /* Slightly larger text */
+    font-weight: 600;                    /* Semi-bold text */
+    cursor: pointer;                     /* Pointer cursor */
+    transition: all 0.3s ease;          /* Smooth transitions */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);  /* Subtle shadow */
+}
+
+/* Button hover effects */
+.callout button:hover {
+    transform: translateY(-3px);                            /* Move up on hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);              /* Stronger shadow */
+}
+
+/* Button link text color */
+.callout button a {
+    color: #2d3436;                     /* Dark gray text */
+}
+
+/* ===== 6. FILTERS SECTION (for advice page) ===== */
+
+/* Filter section styling */
+.filters {
+    background-color: #f1f2f6;          /* Light gray background */
+    padding: 2rem;                      /* Internal spacing */
+    border-bottom: 3px solid #ddd;      /* Bottom border separator */
+}
+
+/* Filter navigation layout */
+.filters ul {
+    list-style: none;                   /* Remove bullet points */
+    display: flex;                      /* Horizontal layout */
+    justify-content: center;            /* Center filters */
+    gap: 2rem;                         /* Space between filters */
+    flex-wrap: wrap;                   /* Wrap on small screens */
+}
+
+/* Filter link styling */
+.filters ul li a {
+    background: linear-gradient(135deg, #667eea, #764ba2);  /* Purple gradient */
+    color: white;                                            /* White text */
+    padding: 0.8rem 2rem;                                  /* Internal spacing */
+    border-radius: 25px;                                    /* Rounded corners */
+    font-weight: 600;                                       /* Semi-bold text */
+    transition: all 0.3s ease;                             /* Smooth transitions */
+    display: block;                                         /* Block display */
+    cursor: pointer;                                        /* Pointer cursor */
+}
+
+/* Filter hover and active states */
+.filters ul li a:hover,
+.filters ul li a.active {
+    background: linear-gradient(135deg, #fd79a8, #e84393);  /* Pink gradient */
+    transform: translateY(-2px);                            /* Move up slightly */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);               /* Drop shadow */
+}
+
+/* ===== 7. ADVICE CARDS SECTION ===== */
+
+/* Advice cards container */
+.advicecards {
+    padding: 3rem 2rem;                 /* Generous padding */
+    max-width: 1200px;                  /* Maximum width for readability */
+    margin: 0 auto;                     /* Center the container */
+}
+
+/* Individual advice card styling */
+.advicecards > div {
+    background: white;                                      /* White background */
+    margin: 2rem 0;                                        /* Vertical spacing */
+    padding: 2rem;                                         /* Internal spacing */
+    border-radius: 15px;                                   /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);              /* Subtle shadow */
+    transition: all 0.3s ease;                            /* Smooth transitions */
+    border-left: 5px solid #667eea;                       /* Colored left border */
+}
+
+/* Advice card hover effect */
+.advicecards > div:hover {
+    transform: translateY(-5px);                           /* Move up on hover */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);            /* Stronger shadow */
+}
+
+/* Advice card headings */
+.advicecards h2 {
+    color: #2d3436;                     /* Dark gray color */
+    margin-bottom: 1rem;                /* Space below heading */
+    font-size: 1.8rem;                  /* Large heading size */
+}
+
+/* Advice card content text */
+.advicecards .advice {
+    line-height: 1.8;                   /* Improved line spacing */
+    color: #636e72;                     /* Medium gray color */
+}
+
+/* List styling within advice cards */
+.advicecards ul {
+    margin: 1rem 0;                     /* Vertical spacing */
+    padding-left: 2rem;                 /* Left indentation */
+}
+
+.advicecards ol {
+    margin: 1rem 0;                     /* Vertical spacing */
+    padding-left: 2rem;                 /* Left indentation */
+}
+
+/* List item spacing */
+.advicecards li {
+    margin-bottom: 0.5rem;              /* Space between list items */
+}
+
+/* Link styling within advice cards */
+.advicecards a {
+    color: #0984e3;                     /* Blue color */
+    font-weight: 600;                   /* Semi-bold text */
+    border-bottom: 2px solid transparent;  /* Transparent border for hover effect */
+    transition: border-color 0.3s ease;    /* Smooth border transition */
+}
+
+/* Link hover effect */
+.advicecards a:hover {
+    border-bottom-color: #0984e3;      /* Blue border on hover */
+}
+
+/* Image styling within advice cards */
+.advicecards img {
+    max-width: 100%;                    /* Responsive width */
+    height: auto;                       /* Maintain aspect ratio */
+    margin: 1rem 0;                     /* Vertical spacing */
+    border-radius: 10px;                /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);  /* Subtle shadow */
+}
+
+/* ===== 8. FORM STYLES ===== */
+
+/* Main content container for forms */
+main {
+    padding: 2rem;                                          /* Internal spacing */
+    max-width: 800px;                                       /* Maximum width */
+    margin: 0 auto;                                         /* Center container */
+    background: white;                                      /* White background */
+    border-radius: 15px;                                    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);              /* Subtle shadow */
+    margin-top: 2rem;                                       /* Top spacing */
+    margin-bottom: 2rem;                                    /* Bottom spacing */
+}
+
+/* Form container styling */
+form {
+    background: #f8f9fa;               /* Light gray background */
+    padding: 2rem;                     /* Internal spacing */
+    border-radius: 10px;               /* Rounded corners */
+    margin: 2rem 0;                    /* Vertical spacing */
+}
+
+/* Form label styling */
+label {
+    font-weight: 600;                  /* Semi-bold text */
+    color: #2d3436;                    /* Dark gray color */
+    margin-bottom: 0.5rem;             /* Space below label */
+    display: block;                    /* Block display for proper spacing */
+}
+
+/* Form input, select, and textarea styling */
+input, select, textarea {
+    width: 100%;                       /* Full width */
+    padding: 0.8rem;                   /* Internal spacing */
+    border: 2px solid #ddd;            /* Gray border */
+    border-radius: 8px;                /* Rounded corners */
+    font-size: 1rem;                   /* Standard font size */
+    transition: all 0.3s ease;         /* Smooth transitions */
+    margin-bottom: 1rem;               /* Space below input */
+}
+
+/* Form element focus states */
+input:focus, select:focus, textarea:focus {
+    outline: none;                                          /* Remove default outline */
+    border-color: #667eea;                                 /* Blue border */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);      /* Blue glow */
+}
+
+/* Error state styling for form elements */
+input.error, select.error, textarea.error {
+    border-color: #d63031;                                 /* Red border */
+    box-shadow: 0 0 0 3px rgba(214, 48, 49, 0.1);        /* Red glow */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea, #764ba2);  /* Purple gradient */
+    color: white;                                            /* White text */
+    padding: 1rem 2rem;                                     /* Internal spacing */
+    border: none;                                           /* Remove border */
+    border-radius: 50px;                                    /* Very rounded corners */
+    font-size: 1.1rem;                                     /* Slightly larger text */
+    font-weight: 600;                                       /* Semi-bold text */
+    cursor: pointer;                                        /* Pointer cursor */
+    transition: all 0.3s ease;                             /* Smooth transitions */
+    width: 100%;                                           /* Full width */
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+    transform: translateY(-2px);                            /* Move up on hover */
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);     /* Purple shadow */
+}
+
+/* Error message styling */
+.error-message {
+    color: #d63031;                     /* Red text */
+    font-size: 0.9rem;                  /* Smaller font size */
+    margin-top: -0.5rem;                /* Negative top margin to move closer to input */
+    margin-bottom: 1rem;                /* Bottom spacing */
+    display: none;                      /* Hidden by default */
+}
+
+/* Show error message when needed */
+.error-message.show {
+    display: block;                     /* Show error message */
+}
+
+/* ===== 9. SAFETY TIPS STYLES ===== */
+
+/* Main section styling for safety page */
+main section {
+    margin: 2rem 0;                     /* Vertical spacing */
+    padding: 2rem;                      /* Internal spacing */
+    background: #f8f9fa;                /* Light gray background */
+    border-radius: 10px;                /* Rounded corners */
+    border-left: 5px solid #00b894;     /* Teal left border */
+}
+
+/* Section headings */
+main section h2 {
+    color: #2d3436;                     /* Dark gray color */
+    margin-bottom: 1rem;                /* Space below heading */
+    font-size: 1.8rem;                  /* Large heading size */
+}
+
+/* List styling in main sections */
+main section ul, main section ol {
+    padding-left: 2rem;                 /* Left indentation */
+}
+
+/* List item styling */
+main section li {
+    margin-bottom: 1rem;                /* Space between items */
+    line-height: 1.6;                   /* Improved line spacing */
+}
+
+/* Strong text emphasis */
+main section strong {
+    color: #e17055;                     /* Orange color for emphasis */
+}
+
+/* ===== 10. FOOTER STYLES ===== */
+
+/* Footer styling with dark background */
+footer {
+    background: #2d3436;               /* Dark gray background */
+    color: white;                      /* White text */
+    text-align: center;                /* Center text */
+    padding: 2rem;                     /* Internal spacing */
+    margin-top: auto;                  /* Push to bottom using flexbox */
+}
+
+/* Footer link styling */
+footer a {
+    color: #74b9ff;                    /* Light blue color */
+    margin: 0 1rem;                    /* Horizontal spacing */
+    transition: color 0.3s ease;       /* Smooth color transition */
+}
+
+/* Footer link hover effect */
+footer a:hover {
+    color: #0984e3;                    /* Darker blue on hover */
+}
+
+/* ===== 11. COMING SOON PAGE STYLES ===== */
+
+/* Coming soon main container */
+.coming-soon {
+    flex: 1;                           /* Take available space */
+    display: flex;                     /* Flexbox layout */
+    justify-content: center;           /* Center horizontally */
+    align-items: center;               /* Center vertically */
+    text-align: center;                /* Center text */
+    padding: 4rem 2rem;                /* Large padding */
+}
+
+/* Coming soon heading */
+.coming-soon h1 {
+    color: #d63031;                    /* Red color */
+    font-size: 3rem;                   /* Large font size */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);  /* Subtle text shadow */
+    animation: pulse 2s infinite;       /* Pulsing animation */
+}
+
+/* Pulse animation for coming soon text */
+@keyframes pulse {
+    0% { 
+        transform: scale(1);            /* Normal size */
+        opacity: 1;                     /* Full opacity */
+    }
+    50% { 
+        transform: scale(1.05);         /* Slightly larger */
+        opacity: 0.8;                   /* Slightly transparent */
+    }
+    100% { 
+        transform: scale(1);            /* Back to normal */
+        opacity: 1;                     /* Full opacity */
+    }
+}
+
+/* ===== 12. RESPONSIVE DESIGN ===== */
+
+/* Tablet and small desktop breakpoint */
+@media (max-width: 768px) {
+    /* Header responsive adjustments */
+    header {
+        flex-direction: column;         /* Stack logo and nav vertically */
+        gap: 1rem;                     /* Space between elements */
+    }
+
+    /* Navigation responsive adjustments */
+    nav ul {
+        flex-direction: column;         /* Stack nav items vertically */
+        gap: 0.5rem;                   /* Smaller gaps */
+        width: 100%;                   /* Full width */
+        text-align: center;            /* Center nav items */
+    }
+
+    /* Hero section responsive adjustments */
+    .hero h2 {
+        font-size: 2rem;               /* Smaller heading on mobile */
+    }
+
+    .phrase {
+        font-size: 1.5rem;             /* Smaller tagline on mobile */
+    }
+
+    /* Callout section responsive adjustments */
+    .callout {
+        flex-direction: column;         /* Stack buttons vertically */
+        gap: 1rem;                     /* Space between buttons */
+    }
+
+    /* Filters responsive adjustments */
+    .filters ul {
+        flex-direction: column;         /* Stack filters vertically */
+        gap: 1rem;                     /* Space between filters */
+    }
+
+    /* Main content responsive adjustments */
+    main {
+        margin: 1rem;                  /* Smaller margins */
+        padding: 1rem;                 /* Smaller padding */
+    }
+
+    /* Cards responsive adjustments */
+    .cards > div {
+        margin: 1rem 0;                /* Vertical margins only */
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+    /* Header mobile adjustments */
+    header {
+        padding: 1rem;                 /* Smaller padding */
+    }
+
+    /* Hero mobile adjustments */
+    .hero {
+        padding: 2rem 1rem;            /* Smaller padding */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;             /* Even smaller heading */
+    }
+
+    .phrase {
+        font-size: 1.2rem;             /* Even smaller tagline */
+    }
+
+    /* Main content mobile adjustments */
+    main {
+        padding: 1rem;                 /* Smaller padding */
+    }
+
+    /* Form mobile adjustments */
+    form {
+        padding: 1rem;                 /* Smaller padding */
+    }
+}
+
+/* ===== 13. ANIMATIONS AND TRANSITIONS ===== */
+
+/* Fade in animation for dynamic content */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;                    /* Start transparent */
+        transform: translateY(30px);    /* Start below final position */
+    }
+    to {
+        opacity: 1;                    /* End fully opaque */
+        transform: translateY(0);       /* End at final position */
+    }
+}
+
+/* Class to apply fade-in animation */
+.fade-in {
+    animation: fadeInUp 0.6s ease-out;  /* Apply animation with easing */
+}
+
+/* ===== 14. UTILITY CLASSES ===== */
+
+/* Utility class to hide elements */
+.hidden {
+    display: none !important;          /* Force hide with important */
+}
+
+/* Text alignment utilities */
+.text-center {
+    text-align: center;                /* Center text */
+}
+
+/* Color utilities */
+.text-red {
+    color: #d63031;                    /* Red text */
+}
+
+.text-green {
+    color: #00b894;                    /* Green text */
+}
+
+/* Margin utilities */
+.mt-2 {
+    margin-top: 2rem;                  /* Top margin */
+}
+
+.mb-2 {
+    margin-bottom: 2rem;               /* Bottom margin */
+}
+
+/* ===== 15. LOADING SPINNER ===== */
+
+/* Loading spinner for form submissions */
+.spinner {
+    border: 4px solid #f3f3f3;         /* Light gray border */
+    border-top: 4px solid #667eea;     /* Blue top border */
+    border-radius: 50%;                /* Circular shape */
+    width: 40px;                       /* Fixed width */
+    height: 40px;                      /* Fixed height */
+    animation: spin 1s linear infinite; /* Spinning animation */
+    margin: 20px auto;                 /* Center with margins */
+}
+
+/* Spin animation for loading spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }     /* Start at 0 degrees */
+    100% { transform: rotate(360deg); } /* End at 360 degrees */
 }
 
 /* ===== HEADER STYLES ===== */
