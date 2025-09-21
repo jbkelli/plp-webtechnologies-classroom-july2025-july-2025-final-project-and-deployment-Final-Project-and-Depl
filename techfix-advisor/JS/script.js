@@ -1048,32 +1048,32 @@ function createMobileMenuToggle() {
 }
 
 // ===== FORM VALIDATION =====
-function initializeFormValidation() {
-    const forms = document.querySelectorAll('form');
+// function initializeFormValidation() {
+//     const forms = document.querySelectorAll('form');
     
-    forms.forEach(form => {
-        // Add real-time validation
-        const inputs = form.querySelectorAll('input, select, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                validateField(this);
-            });
+//     forms.forEach(form => {
+//         // Add real-time validation
+//         const inputs = form.querySelectorAll('input, select, textarea');
+//         inputs.forEach(input => {
+//             input.addEventListener('blur', function() {
+//                 validateField(this);
+//             });
             
-            input.addEventListener('input', function() {
-                clearErrorMessage(this);
-            });
-        });
+//             input.addEventListener('input', function() {
+//                 clearErrorMessage(this);
+//             });
+//         });
         
-        // Form submission validation
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+//         // Form submission validation
+//         form.addEventListener('submit', function(e) {
+//             e.preventDefault();
             
-            if (validateForm(this)) {
-                submitForm(this);
-            }
-        });
-    });
-}
+//             if (validateForm(this)) {
+//                 submitForm(this);
+//             }
+//         });
+//     });
+// }
 
 function validateField(field) {
     const fieldName = field.name;
