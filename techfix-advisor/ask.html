@@ -30,12 +30,15 @@
     <main>
       <section>
         <h2>Submit Your Question</h2>
-        <form action="mailto:444mwangialvinm@gmail.com,tech.marval.innovations@gmail.com?subject=TechFix%20Question%20Submission&body=Please%20find%20the%20question%20details%20below:" method="post" enctype="text/plain">
+        <form action="https://formsubmit.co/primary@email.com" method="POST">
+
           <label for="name">Name (optional):</label><br>
           <input type="text" id="name" name="name" placeholder="Your name"><br><br>
 
           <label for="email">Email (optional):</label><br>
-          <input type="email" id="email" name="email" placeholder="your.email@example.com"><br><br>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com">
+          <input type="hidden" name="_cc" value="second@email.com,third@email.com">
+          <br><br>
 
           <label for="device">Device Type:</label><br>
           <select id="device" name="device" required>
