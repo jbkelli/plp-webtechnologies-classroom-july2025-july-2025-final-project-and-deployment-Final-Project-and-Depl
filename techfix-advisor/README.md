@@ -305,4 +305,6 @@ For technical support or questions:
 
 ---
 
+*Deployment link*: https://techfix-advisor.vercel.app/
+
 *Built with ❤️ for the tech community*
